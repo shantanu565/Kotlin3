@@ -2,9 +2,20 @@
 // WAP to create extension function.
 
 fun main(){
-    val s1="car"
-    val s2="bus"
-    val s3="@"
+     val str1 = "apple"
+    val str2 = "banana"
+    val str3 = "@"
 
-    println(s1.add(s3.multiply))
+    println(str1.add(str3.multiply(5), str2))
+}
+
+fun String.multiply(number: Int): String {
+    var str = this
+    for (i in 1 until number)
+        str += this
+    return str
+}
+
+fun String.add(str1: String, str2: String): String {
+    return this + str1 + str2
 }
